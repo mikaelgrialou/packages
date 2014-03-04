@@ -35,6 +35,7 @@
 #include <gtkmm/frame.h>
 #include <gtkmm/spinbutton.h>
 #include <gtkmm/builder.h>
+#include <gtkmm/checkbutton.h>
 
 namespace vle { namespace gvle { namespace modeling { namespace de {
 

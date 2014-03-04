@@ -108,11 +108,11 @@ bool Simple::create(vpz::AtomicModel& model,
     if (m_dialog->run() == Gtk::RESPONSE_ACCEPT) {
         generate(model, dynamic, conditions, observables, classname,
                  namespace_);
-        m_dialog->hide_all();
+        m_dialog->hide();
         destroy();
         return true;
     }
-    m_dialog->hide_all();
+    m_dialog->hide();
     destroy();
     return false;
 }
@@ -321,11 +321,11 @@ bool Simple::modify(vpz::AtomicModel& model,
     if (m_dialog->run() == Gtk::RESPONSE_ACCEPT) {
         generate(model, dynamic, conditions, observables, classname,
                  namespace_);
-        m_dialog->hide_all();
+        m_dialog->hide();
         destroy();
         return true;
     }
-    m_dialog->hide_all();
+    m_dialog->hide();
     destroy();
     return false;
 }

@@ -34,7 +34,6 @@
 #include <gtkmm/radiobutton.h>
 #include <gtkmm/checkbutton.h>
 #include <gtkmm/comboboxtext.h>
-#include <gtkmm/comboboxentrytext.h>
 
 namespace vle {
 namespace gvle {
@@ -58,7 +57,7 @@ private:
     Gtk::CheckButton* mCheckJulianDay;
     Gtk::CheckButton* mCheckFlushByBag;
     Gtk::ComboBoxText* mComboType;
-    Gtk::ComboBoxEntryText* mComboFile;
+    Gtk::ComboBoxText* mComboFile;
     Gtk::HBox* mHBoxFile;
     Gtk::HBox* mHBoxLocale;
 
