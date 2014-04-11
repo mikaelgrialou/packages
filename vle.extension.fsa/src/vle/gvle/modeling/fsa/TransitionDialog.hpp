@@ -30,7 +30,7 @@
 #define VLE_GVLE_MODELING_FSA_TRANSITION_DIALOG_HPP
 
 #include <vle/gvle/modeling/fsa/Statechart.hpp>
-#include <gtkmm/comboboxentrytext.h>
+#include <gtkmm/comboboxtext.h>
 #include <gtkmm/dialog.h>
 #include <gtkmm/entry.h>
 #include <gtkmm/builder.h>
@@ -136,23 +136,23 @@ private:
     Gtk::Dialog* mDialog;
     Gtk::VBox* mComboVBox;
     // event
-    Gtk::ComboBoxEntryText* mEventEntry;
+    Gtk::ComboBoxText* mEventEntry;
     // after
-    Gtk::ComboBoxEntryText* mAfterEntry;
+    Gtk::ComboBoxText* mAfterEntry;
     Gtk::Button* mAfterButton;
     // when
-    Gtk::ComboBoxEntryText* mWhenEntry;
+    Gtk::ComboBoxText* mWhenEntry;
     Gtk::Button* mWhenButton;
     // guard
-    Gtk::ComboBoxEntryText* mGuardEntry;
+    Gtk::ComboBoxText* mGuardEntry;
     Gtk::Button* mGuardButton;
     // action
-    Gtk::ComboBoxEntryText* mActionEntry;
+    Gtk::ComboBoxText* mActionEntry;
     Gtk::Button* mActionButton;
     // send
     Gtk::HBox* mSendHBox;
-    Gtk::ComboBoxEntryText* mOutputPortEntry;
-    Gtk::ComboBoxEntryText* mSendEntry;
+    Gtk::ComboBoxText* mOutputPortEntry;
+    Gtk::ComboBoxText* mSendEntry;
     Gtk::Button* mSendButton;
 
     Gtk::Button* mOkButton;

@@ -57,7 +57,7 @@ private:
 	UnitComboBoxText(BaseObjectType* cobject,
                          const Glib::RefPtr < Gtk::Builder >&) :
 	    Gtk::ComboBoxText(cobject) { }
-	virtual ~UnitComboBoxText() {}
+	virtual ~UnitComboBoxText() { }
     };
 
     Gtk::Frame*       m_frame;

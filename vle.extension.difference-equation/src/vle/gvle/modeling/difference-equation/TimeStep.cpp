@@ -54,11 +54,11 @@ Gtk::Widget& TimeStep::build(Glib::RefPtr < Gtk::Builder >& ref)
     ref->get_widget("TimeStepSpinButton", m_spinTime);
     ref->get_widget("TimeStepGlobalButton", m_checkGlobal);
     ref->get_widget_derived("UnitTimeStepComboBox", m_comboUnit);
-
-    m_spinTime->set_range(0.01,
-			  std::numeric_limits < double >::max());
+    
+    m_spinTime->set_range(0.01, 
+        std::numeric_limits < float >::max());
     m_spinTime->set_value(1.00);
-
+    
     m_comboUnit->append("");
     m_comboUnit->append("day");
     m_comboUnit->append("week");

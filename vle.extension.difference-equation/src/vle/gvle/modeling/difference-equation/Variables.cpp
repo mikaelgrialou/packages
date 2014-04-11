@@ -180,16 +180,16 @@ Variables::VariablesTreeView::VariablesTreeView(
 	&Variables::VariablesTreeView::onSelect));
 
 
-    mPopupActionGroup = Gtk::ActionGroup::create("VariablesTreeView");
-    mPopupActionGroup->add(Gtk::Action::create("VTV_ContextMenu", _("Context Menu")));
+    mPopupActionGroup = Gtk::ActionGroup::create("VariablesTreeView2");
+    mPopupActionGroup->add(Gtk::Action::create("VTV2_ContextMenu", _("Context Menu")));
 
-    mPopupActionGroup->add(Gtk::Action::create("VTV_ContextAdd", _("_Add")),
+    mPopupActionGroup->add(Gtk::Action::create("VTV2_ContextAdd", _("_Add")),
         sigc::mem_fun(*this, &Variables::VariablesTreeView::onAdd));
 
-    mPopupActionGroup->add(Gtk::Action::create("VTV_ContextRemove", _("_Remove")),
+    mPopupActionGroup->add(Gtk::Action::create("VTV2_ContextRemove", _("_Remove")),
         sigc::mem_fun(*this, &Variables::VariablesTreeView::onRemove));
 
-    mPopupActionGroup->add(Gtk::Action::create("VTV_ContextEdit", _("_Edit")),
+    mPopupActionGroup->add(Gtk::Action::create("VTV2_ContextEdit", _("_Edit")),
         sigc::mem_fun(*this, &Variables::VariablesTreeView::onEdit));
 
     mPopupUIManager = Gtk::UIManager::create();
@@ -197,23 +197,23 @@ Variables::VariablesTreeView::VariablesTreeView(
 
     Glib::ustring ui_info =
         "<ui>"
-        "  <popup name='IPTView_Popup'>"
-        "      <menuitem action='VTV_ContextAdd'/>"
-        "      <menuitem action='VTV_ContextRemove'/>"
-        "      <menuitem action='VTV_ContextEdit'/>"
+        "  <popup name='VTView2_Popup'>"
+        "      <menuitem action='VTV2_ContextAdd'/>"
+        "      <menuitem action='VTV2_ContextRemove'/>"
+        "      <menuitem action='VTV2_ContextEdit'/>"
         "  </popup>"
         "</ui>";
 
     try {
         mPopupUIManager->add_ui_from_string(ui_info);
         mMenuPopup = (Gtk::Menu *) (
-            mPopupUIManager->get_widget("/VTView_Popup"));
+            mPopupUIManager->get_widget("/VTView2_Popup"));
     } catch(const Glib::Error& ex) {
-        std::cerr << "building menus failed: VTView_Popup " <<  ex.what();
+        std::cerr << "building menus failed: VTView2_Popup " <<  ex.what();
     }
 
     if (!mMenuPopup)
-        std::cerr << "menu not found : VTView_Popup\n";
+        std::cerr << "menu not found : VTView2_Popup\n";
 }
 
 Variables::VariablesTreeView::~VariablesTreeView()
