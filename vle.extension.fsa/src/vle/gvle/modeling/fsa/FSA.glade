@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <interface>
-  <!-- interface-requires gtk+ 2.6 -->
+  <!-- interface-requires gtk+ 3.0 -->
   <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkDialog" id="SourceDialog">
     <property name="border_width">5</property>
@@ -8,7 +8,8 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox7">
+      <object class="GtkBox" id="dialog-vbox7">
+        <property name="orientation">vertical</property>
         <property name="width_request">500</property>
         <property name="height_request">500</property>
         <property name="visible">True</property>
@@ -43,7 +44,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area7">
+          <object class="GtkButtonBox" id="dialog-action_area7">
             <property name="visible">True</property>
             <property name="layout_style">end</property>
             <child>
@@ -95,34 +96,31 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox9">
+      <object class="GtkBox" id="dialog-vbox9">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkVBox" id="vbox1">
+          <object class="GtkBox" id="vbox1">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="orientation">vertical</property>
             <child>
-              <object class="GtkHBox" id="StatechartHBox">
+              <object class="GtkBox" id="StatechartHBox">
                 <property name="visible">True</property>
                 <child>
-                  <object class="GtkScrolledWindow" id="StatechartScrolledWindow">
+                  <object class="GtkViewport" id="StatechartViewport">
                     <property name="width_request">500</property>
                     <property name="height_request">500</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="hscrollbar_policy">automatic</property>
                     <property name="vscrollbar_policy">automatic</property>
+                    <property name="resize_mode">queue</property>
                     <child>
-                      <object class="GtkViewport" id="StatechartViewport">
+                      <object class="GtkDrawingArea" id="StatechartDrawingArea">
                         <property name="visible">True</property>
-                        <property name="resize_mode">queue</property>
-                        <child>
-                          <object class="GtkDrawingArea" id="StatechartDrawingArea">
-                            <property name="visible">True</property>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>
@@ -147,7 +145,7 @@
                     <property name="visible">True</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkHBox" id="hbox1">
+                      <object class="GtkBox" id="hbox1">
                         <property name="visible">True</property>
                         <property name="homogeneous">True</property>
                         <child>
@@ -214,7 +212,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area9">
+          <object class="GtkButtonBox" id="dialog-action_area9">
             <property name="visible">True</property>
             <property name="layout_style">end</property>
             <child>
@@ -267,16 +265,18 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox3">
+      <object class="GtkBox" id="dialog-vbox3">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkVBox" id="vbox1b">
+          <object class="GtkBox" id="vbox1b">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="orientation">vertical</property>
             <child>
-              <object class="GtkHBox" id="hbox1b">
+              <object class="GtkBox" id="hbox1b">
                 <property name="visible">True</property>
                 <child>
                   <object class="GtkLabel" id="NewStateNameLabel">
@@ -288,7 +288,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkHBox" id="hbox2">
+                  <object class="GtkBox" id="hbox2">
                     <property name="visible">True</property>
                     <child>
                       <object class="GtkEntry" id="NewStateNameEntry">
@@ -338,7 +338,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area3">
+          <object class="GtkButtonBox" id="dialog-action_area3">
             <property name="visible">True</property>
             <property name="layout_style">end</property>
             <child>
@@ -395,16 +395,18 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox4">
+      <object class="GtkBox" id="dialog-vbox4">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkVBox" id="vbox1c">
+          <object class="GtkBox" id="vbox1c">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="orientation">vertical</property>
             <child>
-              <object class="GtkHBox" id="hbox1c">
+              <object class="GtkBox" id="hbox1c">
                 <property name="visible">True</property>
                 <child>
                   <object class="GtkLabel" id="StateNameLabel">
@@ -443,10 +445,11 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHBox" id="hbox5">
+              <object class="GtkBox" id="hbox5">
                 <property name="visible">True</property>
                 <child>
-                  <object class="GtkVBox" id="vbox2">
+                  <object class="GtkBox" id="vbox2">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="orientation">vertical</property>
                     <child>
@@ -482,7 +485,8 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkVBox" id="StateVBox">
+                  <object class="GtkBox" id="StateVBox">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="orientation">vertical</property>
                     <child>
@@ -500,7 +504,8 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkVBox" id="vbox4b">
+                  <object class="GtkBox" id="vbox4b">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="orientation">vertical</property>
                     <child>
@@ -586,7 +591,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area4">
+          <object class="GtkButtonBox" id="dialog-action_area4">
             <property name="visible">True</property>
             <property name="layout_style">end</property>
             <child>
@@ -638,15 +643,17 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox5">
+      <object class="GtkBox" id="dialog-vbox5">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkHBox" id="hbox1d">
+          <object class="GtkBox" id="hbox1d">
             <property name="visible">True</property>
             <child>
-              <object class="GtkVBox" id="vbox2b">
+              <object class="GtkBox" id="vbox2b">
+                <property name="orientation">vertical</property>
                 <property name="visible">True</property>
                 <property name="orientation">vertical</property>
                 <child>
@@ -709,7 +716,8 @@
               </packing>
             </child>
             <child>
-              <object class="GtkVBox" id="ComboVBox">
+              <object class="GtkBox" id="ComboVBox">
+                <property name="orientation">vertical</property>
                 <property name="visible">True</property>
                 <property name="orientation">vertical</property>
                 <child>
@@ -736,7 +744,8 @@
               </packing>
             </child>
             <child>
-              <object class="GtkVBox" id="vbox4c">
+              <object class="GtkBox" id="vbox4c">
+                <property name="orientation">vertical</property>
                 <property name="visible">True</property>
                 <property name="orientation">vertical</property>
                 <property name="spacing">5</property>
@@ -819,7 +828,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area5">
+          <object class="GtkButtonBox" id="dialog-action_area5">
             <property name="visible">True</property>
             <property name="layout_style">end</property>
             <child>
@@ -872,19 +881,22 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox7b">
+      <object class="GtkBox" id="dialog-vbox7b">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkVBox" id="vbox1d">
+          <object class="GtkBox" id="vbox1d">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="orientation">vertical</property>
             <child>
-              <object class="GtkHBox" id="hbox1e">
+              <object class="GtkBox" id="hbox1e">
                 <property name="visible">True</property>
                 <child>
-                  <object class="GtkVBox" id="vbox2c">
+                  <object class="GtkBox" id="vbox2c">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="orientation">vertical</property>
                     <child>
@@ -911,7 +923,8 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkVBox" id="EventInStateVBox">
+                  <object class="GtkBox" id="EventInStateVBox">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="orientation">vertical</property>
                     <child>
@@ -934,7 +947,8 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkVBox" id="vbox4d">
+                  <object class="GtkBox" id="vbox4d">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="orientation">vertical</property>
                     <child>
@@ -977,7 +991,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area7b">
+          <object class="GtkButtonBox" id="dialog-action_area7b">
             <property name="visible">True</property>
             <property name="layout_style">end</property>
             <child>
@@ -1032,16 +1046,18 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox8">
+      <object class="GtkBox" id="dialog-vbox8">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="orientation">vertical</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkVBox" id="vbox1e">
+          <object class="GtkBox" id="vbox1e">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="orientation">vertical</property>
             <child>
-              <object class="GtkHBox" id="hbox1f">
+              <object class="GtkBox" id="hbox1f">
                 <property name="visible">True</property>
                 <child>
                   <object class="GtkLabel" id="TimeStepLabel">
@@ -1074,7 +1090,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area8">
+          <object class="GtkButtonBox" id="dialog-action_area8">
             <property name="visible">True</property>
             <property name="layout_style">end</property>
             <child>

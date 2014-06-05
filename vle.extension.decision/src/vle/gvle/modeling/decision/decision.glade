@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="2.16"/>
+  <requires lib="gtk+" version="3.0"/>
   <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkDialog" id="AckFunctionDialog">
     <property name="can_focus">False</property>
@@ -9,10 +9,11 @@
     <property name="modal">True</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox17">
+      <object class="GtkBox" id="dialog-vbox17">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area17">
+          <object class="GtkButtonBox" id="dialog-action_area17">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -54,7 +55,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkHBox" id="box15">
+          <object class="GtkBox" id="box15">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="spacing">10</property>
@@ -70,17 +71,11 @@
                     <property name="can_focus">False</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkScrolledWindow" id="scrolledwindow10">
+                      <object class="GtkTreeView" id="treeViewAck">
+                        <property name="shadow_type">in</property>
+                        <property name="width_request">150</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="shadow_type">in</property>
-                        <child>
-                          <object class="GtkTreeView" id="treeViewAck">
-                            <property name="width_request">150</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>
@@ -113,11 +108,12 @@
                     <property name="can_focus">False</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkVBox" id="boxA16">
+                      <object class="GtkBox" id="boxA16">
+                        <property name="orientation">vertical</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
-                          <object class="GtkHBox" id="box17">
+                          <object class="GtkBox" id="box17">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <child>
@@ -168,7 +164,8 @@
                                 <property name="can_focus">False</property>
                                 <property name="left_padding">12</property>
                                 <child>
-                                  <object class="GtkVBox" id="vboxA1">
+                                  <object class="GtkBox" id="vboxA1">
+                                    <property name="orientation">vertical</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <child>
@@ -185,17 +182,11 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkScrolledWindow" id="scrolledwindowA1">
+                                      <object class="GtkTextView" id="AckFunction">
+                                        <property name="width_request">400</property>
+                                        <property name="height_request">300</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <child>
-                                          <object class="GtkTextView" id="AckFunction">
-                                            <property name="width_request">400</property>
-                                            <property name="height_request">300</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
-                                          </object>
-                                        </child>
                                       </object>
                                       <packing>
                                         <property name="expand">True</property>
@@ -277,10 +268,11 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox4">
+      <object class="GtkBox" id="dialog-vbox4">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area4">
+          <object class="GtkButtonBox" id="dialog-action_area4">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -324,11 +316,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkVBox" id="box1">
+          <object class="GtkBox" id="box1">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkHBox" id="box2">
+              <object class="GtkBox" id="box2">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -393,7 +386,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHBox" id="box3">
+              <object class="GtkBox" id="box3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -446,7 +439,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHBox" id="box4">
+              <object class="GtkBox" id="box4">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -503,7 +496,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <child>
-                  <object class="GtkHBox" id="box5">
+                  <object class="GtkBox" id="box5">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -525,18 +518,12 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <child>
-                                  <object class="GtkScrolledWindow" id="scrolledwindow1">
+                                  <object class="GtkTreeView" id="TreeViewActRule">
+                                    <property name="shadow_type">in</property>
+                                    <property name="width_request">200</property>
+                                    <property name="height_request">150</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="shadow_type">in</property>
-                                    <child>
-                                      <object class="GtkTreeView" id="TreeViewActRule">
-                                        <property name="width_request">200</property>
-                                        <property name="height_request">150</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                      </object>
-                                    </child>
                                   </object>
                                 </child>
                               </object>
@@ -559,7 +546,8 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkVButtonBox" id="buttonbox1">
+                      <object class="GtkButtonBox" id="buttonbox1">
+                        <property name="orientation">vertical</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="layout_style">center</property>
@@ -617,18 +605,12 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <child>
-                                  <object class="GtkScrolledWindow" id="scrolledwindow2">
+                                  <object class="GtkTreeView" id="TreeViewPlanRule">
+                                    <property name="shadow_type">in</property>
+                                    <property name="width_request">200</property>
+                                    <property name="height_request">150</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="shadow_type">in</property>
-                                    <child>
-                                      <object class="GtkTreeView" id="TreeViewPlanRule">
-                                        <property name="width_request">200</property>
-                                        <property name="height_request">150</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                      </object>
-                                    </child>
                                   </object>
                                 </child>
                               </object>
@@ -671,7 +653,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <child>
-                  <object class="GtkHBox" id="box13">
+                  <object class="GtkBox" id="box13">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -693,18 +675,12 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <child>
-                                  <object class="GtkScrolledWindow" id="scrolledwindow6">
+                                  <object class="GtkTreeView" id="TreeViewActOutput">
+                                    <property name="shadow_type">in</property>
+                                    <property name="width_request">200</property>
+                                    <property name="height_request">150</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="shadow_type">in</property>
-                                    <child>
-                                      <object class="GtkTreeView" id="TreeViewActOutput">
-                                        <property name="width_request">200</property>
-                                        <property name="height_request">150</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                      </object>
-                                    </child>
                                   </object>
                                 </child>
                               </object>
@@ -727,7 +703,8 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkVButtonBox" id="buttonbox2">
+                      <object class="GtkButtonBox" id="buttonbox2">
+                        <property name="orientation">vertical</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="layout_style">center</property>
@@ -785,18 +762,12 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <child>
-                                  <object class="GtkScrolledWindow" id="scrolledwindow7">
+                                  <object class="GtkTreeView" id="TreeViewOutput">
+                                    <property name="shadow_type">in</property>
+                                    <property name="width_request">200</property>
+                                    <property name="height_request">150</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="shadow_type">in</property>
-                                    <child>
-                                      <object class="GtkTreeView" id="TreeViewOutput">
-                                        <property name="width_request">200</property>
-                                        <property name="height_request">150</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                      </object>
-                                    </child>
                                   </object>
                                 </child>
                               </object>
@@ -839,7 +810,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <child>
-                  <object class="GtkHBox" id="box14">
+                  <object class="GtkBox" id="box14">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -861,18 +832,12 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <child>
-                                  <object class="GtkScrolledWindow" id="scrolledwindow8">
+                                  <object class="GtkTreeView" id="TreeViewActAck">
+                                    <property name="shadow_type">in</property>
+                                    <property name="width_request">200</property>
+                                    <property name="height_request">150</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="shadow_type">in</property>
-                                    <child>
-                                      <object class="GtkTreeView" id="TreeViewActAck">
-                                        <property name="width_request">200</property>
-                                        <property name="height_request">150</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                      </object>
-                                    </child>
                                   </object>
                                 </child>
                               </object>
@@ -896,7 +861,8 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkVButtonBox" id="buttonbox3">
+                      <object class="GtkButtonBox" id="buttonbox3">
+                        <property name="orientation">vertical</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="layout_style">center</property>
@@ -954,18 +920,12 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <child>
-                                  <object class="GtkScrolledWindow" id="scrolledwindow9">
+                                  <object class="GtkTreeView" id="TreeViewAck">
+                                    <property name="shadow_type">in</property>
+                                    <property name="width_request">200</property>
+                                    <property name="height_request">150</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="shadow_type">in</property>
-                                    <child>
-                                      <object class="GtkTreeView" id="TreeViewAck">
-                                        <property name="width_request">200</property>
-                                        <property name="height_request">150</property>
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                      </object>
-                                    </child>
                                   </object>
                                 </child>
                               </object>
@@ -1025,7 +985,8 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox9">
+      <object class="GtkBox" id="dialog-vbox9">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
@@ -1106,7 +1067,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area9">
+          <object class="GtkButtonBox" id="dialog-action_area9">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
@@ -1149,30 +1110,25 @@
           </packing>
         </child>
         <child>
-          <object class="GtkVBox" id="vbox1">
+          <object class="GtkBox" id="vbox1">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkHBox" id="StatechartHBox">
+              <object class="GtkBox" id="StatechartHBox">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
-                  <object class="GtkScrolledWindow" id="StatechartScrolledWindow">
+                  <object class="GtkViewport" id="StatechartViewport">
                     <property name="width_request">500</property>
                     <property name="height_request">500</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
+                    <property name="resize_mode">queue</property>
                     <child>
-                      <object class="GtkViewport" id="StatechartViewport">
+                      <object class="GtkDrawingArea" id="StatechartDrawingArea">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="resize_mode">queue</property>
-                        <child>
-                          <object class="GtkDrawingArea" id="StatechartDrawingArea">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>
@@ -1203,7 +1159,7 @@
                     <property name="can_focus">False</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkHBox" id="hbox1">
+                      <object class="GtkBox" id="hbox1">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="homogeneous">True</property>
@@ -1355,13 +1311,14 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox12">
+      <object class="GtkBox" id="dialog-vbox12">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area12">
+          <object class="GtkButtonBox" id="dialog-action_area12">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
@@ -1433,12 +1390,13 @@
     <property name="window_position">center-always</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vboxTVPred">
+      <object class="GtkBox" id="dialog-vboxTVPred">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkHButtonBox" id="hbuttonbox1">
+          <object class="GtkButtonBox" id="hbuttonbox1">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">start</property>
@@ -1492,7 +1450,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_areaEditor">
+          <object class="GtkButtonBox" id="dialog-action_areaEditor">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
@@ -1535,7 +1493,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkHBox" id="hbox20">
+          <object class="GtkBox" id="hbox20">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
@@ -1549,17 +1507,11 @@
                     <property name="can_focus">False</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkScrolledWindow" id="scrolledwindowPred">
-                        <property name="visible">True</property>
-                        <property name="can_focus">True</property>
+                      <object class="GtkTreeView" id="treeVPred">
                         <property name="hscrollbar_policy">automatic</property>
                         <property name="vscrollbar_policy">automatic</property>
-                        <child>
-                          <object class="GtkTreeView" id="treeVPred">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                          </object>
-                        </child>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
                       </object>
                     </child>
                   </object>
@@ -1601,11 +1553,12 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox18">
+      <object class="GtkBox" id="dialog-vbox18">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area18">
+          <object class="GtkButtonBox" id="dialog-action_area18">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -1645,7 +1598,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkHBox" id="hbox2">
+          <object class="GtkBox" id="hbox2">
             <property name="can_focus">False</property>
             <property name="spacing">10</property>
             <child>
@@ -1661,17 +1614,12 @@
                     <property name="left_padding">10</property>
                     <property name="right_padding">10</property>
                     <child>
-                      <object class="GtkScrolledWindow" id="scrolledwindowDialogViewOutput">
+                      <object class="GtkTreeView" id="treeViewFactList">
+                        <property name="width_request">150</property>
+                        <property name="height_request">150</property>
+                        <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <child>
-                          <object class="GtkTreeView" id="treeViewFactList">
-                            <property name="width_request">150</property>
-                            <property name="height_request">150</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="rules_hint">True</property>
-                          </object>
-                        </child>
+                        <property name="rules_hint">True</property>
                       </object>
                     </child>
                   </object>
@@ -1703,10 +1651,11 @@
                     <property name="left_padding">10</property>
                     <property name="right_padding">19</property>
                     <child>
-                      <object class="GtkVBox" id="vbox1b1">
+                      <object class="GtkBox" id="vbox1b1">
+                        <property name="orientation">vertical</property>
                         <property name="can_focus">False</property>
                         <child>
-                          <object class="GtkHBox" id="comboboxTypeDialogViewOutput">
+                          <object class="GtkBox" id="comboboxTypeDialogViewOutput">
                             <property name="can_focus">False</property>
                             <property name="spacing">10</property>
                             <child>
@@ -1743,7 +1692,8 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkVPaned" id="vpanedkb1">
+                          <object class="GtkPaned" id="vpanedkb1">
+                            <property name="orientation">vertical</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <child>
@@ -1759,15 +1709,10 @@
                                     <property name="left_padding">10</property>
                                     <property name="right_padding">10</property>
                                     <child>
-                                      <object class="GtkScrolledWindow" id="scrolledwindowkb3">
+                                      <object class="GtkTextView" id="factAttributes">
                                         <property name="visible">True</property>
+                                        <property name="width_request">300</property>
                                         <property name="can_focus">True</property>
-                                        <child>
-                                          <object class="GtkTextView" id="factAttributes">
-                                            <property name="width_request">300</property>
-                                            <property name="can_focus">True</property>
-                                          </object>
-                                        </child>
                                       </object>
                                     </child>
                                   </object>
@@ -1786,7 +1731,8 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkVPaned" id="vpanedkb2">
+                              <object class="GtkPaned" id="vpanedkb2">
+                                <property name="orientation">vertical</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <child>
@@ -1802,15 +1748,11 @@
                                         <property name="left_padding">10</property>
                                         <property name="right_padding">10</property>
                                         <child>
-                                          <object class="GtkScrolledWindow" id="scrolledwindowkb2">
+                                          <object class="GtkTextView" id="factInit">
                                             <property name="visible">True</property>
                                             <property name="can_focus">True</property>
-                                            <child>
-                                              <object class="GtkTextView" id="factInit">
-                                                <property name="width_request">300</property>
-                                                <property name="can_focus">True</property>
-                                              </object>
-                                            </child>
+                                            <property name="width_request">300</property>
+                                            <property name="can_focus">True</property>
                                           </object>
                                         </child>
                                       </object>
@@ -1840,7 +1782,8 @@
                                         <property name="can_focus">False</property>
                                         <property name="left_padding">12</property>
                                         <child>
-                                          <object class="GtkVBox" id="vboxkb1">
+                                          <object class="GtkBox" id="vboxkb1">
+                                            <property name="orientation">vertical</property>
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
                                             <child>
@@ -1857,16 +1800,11 @@
                                               </packing>
                                             </child>
                                             <child>
-                                              <object class="GtkScrolledWindow" id="scrolledwindowkb1">
+                                              <object class="GtkTextView" id="factFunction">
                                                 <property name="visible">True</property>
+                                                <property name="width_request">300</property>
+                                                <property name="height_request">300</property>
                                                 <property name="can_focus">True</property>
-                                                <child>
-                                                  <object class="GtkTextView" id="factFunction">
-                                                    <property name="width_request">300</property>
-                                                    <property name="height_request">300</property>
-                                                    <property name="can_focus">True</property>
-                                                  </object>
-                                                </child>
                                               </object>
                                               <packing>
                                                 <property name="expand">True</property>
@@ -1957,10 +1895,11 @@
     <property name="modal">True</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox14">
+      <object class="GtkBox" id="dialog-vbox14">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area14">
+          <object class="GtkButtonBox" id="dialog-action_area14">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -2002,7 +1941,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkHBox" id="box10">
+          <object class="GtkBox" id="box10">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="spacing">10</property>
@@ -2018,17 +1957,11 @@
                     <property name="can_focus">False</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkScrolledWindow" id="scrolledwindow4">
+                      <object class="GtkTreeView" id="treeViewOF">
+                        <property name="shadow_type">in</property>
+                        <property name="width_request">150</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="shadow_type">in</property>
-                        <child>
-                          <object class="GtkTreeView" id="treeViewOF">
-                            <property name="width_request">150</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>
@@ -2061,11 +1994,12 @@
                     <property name="can_focus">False</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkVBox" id="box11">
+                      <object class="GtkBox" id="box11">
+                        <property name="orientation">vertical</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
-                          <object class="GtkHBox" id="box12">
+                          <object class="GtkBox" id="box12">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <child>
@@ -2115,7 +2049,8 @@
                                 <property name="can_focus">False</property>
                                 <property name="left_padding">12</property>
                                 <child>
-                                  <object class="GtkVBox" id="vboxO1">
+                                  <object class="GtkBox" id="vboxO1">
+                                    <property name="orientation">vertical</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <child>
@@ -2132,17 +2067,11 @@
                                       </packing>
                                     </child>
                                     <child>
-                                      <object class="GtkScrolledWindow" id="scrolledwindowO1">
+                                      <object class="GtkTextView" id="OFFunction">
+                                        <property name="width_request">400</property>
+                                        <property name="height_request">300</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
-                                        <child>
-                                          <object class="GtkTextView" id="OFFunction">
-                                            <property name="width_request">400</property>
-                                            <property name="height_request">300</property>
-                                            <property name="visible">True</property>
-                                            <property name="can_focus">True</property>
-                                          </object>
-                                        </child>
                                       </object>
                                       <packing>
                                         <property name="expand">True</property>
@@ -2224,11 +2153,12 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox21">
+      <object class="GtkBox" id="dialog-vbox21">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child>
-          <object class="GtkHPaned" id="hpaned1">
+          <object class="GtkPaned" id="hpaned1">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <child>
@@ -2244,17 +2174,12 @@
                     <property name="left_padding">10</property>
                     <property name="right_padding">10</property>
                     <child>
-                      <object class="GtkScrolledWindow" id="scrolledwindowDialogViewOutput1">
+                      <object class="GtkTreeView" id="treeViewParam">
+                        <property name="width_request">250</property>
+                        <property name="height_request">150</property>
+                        <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <child>
-                          <object class="GtkTreeView" id="treeViewParam">
-                            <property name="width_request">250</property>
-                            <property name="height_request">150</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="rules_hint">True</property>
-                          </object>
-                        </child>
+                        <property name="rules_hint">True</property>
                       </object>
                     </child>
                   </object>
@@ -2273,11 +2198,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkVBox" id="box18">
+              <object class="GtkBox" id="box18">
+                <property name="orientation">vertical</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
-                  <object class="GtkHButtonBox" id="buttonbox4">
+                  <object class="GtkButtonBox" id="buttonbox4">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="layout_style">start</property>
@@ -2317,7 +2243,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkHBox" id="box19">
+                  <object class="GtkBox" id="box19">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -2357,7 +2283,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkHBox" id="box21">
+                  <object class="GtkBox" id="box21">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -2391,7 +2317,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkHBox" id="box20">
+                  <object class="GtkBox" id="box20">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -2431,7 +2357,8 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkVPaned" id="vpaned1">
+                  <object class="GtkPaned" id="vpaned1">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <child>
@@ -2446,16 +2373,10 @@
                             <property name="can_focus">False</property>
                             <property name="left_padding">12</property>
                             <child>
-                              <object class="GtkScrolledWindow" id="scrolledwindow12">
+                              <object class="GtkTextView" id="IncludeText">
+                                <property name="shadow_type">in</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="shadow_type">in</property>
-                                <child>
-                                  <object class="GtkTextView" id="IncludeText">
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                  </object>
-                                </child>
                               </object>
                             </child>
                           </object>
@@ -2475,7 +2396,8 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkVPaned" id="vpaned2">
+                      <object class="GtkPaned" id="vpaned2">
+                        <property name="orientation">vertical</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <child>
@@ -2490,16 +2412,10 @@
                                 <property name="can_focus">False</property>
                                 <property name="left_padding">12</property>
                                 <child>
-                                  <object class="GtkScrolledWindow" id="scrolledwindow1111">
+                                  <object class="GtkTextView" id="ConstructorText">
+                                    <property name="shadow_type">in</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="shadow_type">in</property>
-                                    <child>
-                                      <object class="GtkTextView" id="ConstructorText">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                      </object>
-                                    </child>
                                   </object>
                                 </child>
                               </object>
@@ -2530,16 +2446,10 @@
                                 <property name="can_focus">False</property>
                                 <property name="left_padding">12</property>
                                 <child>
-                                  <object class="GtkScrolledWindow" id="scrolledwindow11111">
+                                  <object class="GtkTextView" id="MembersText">
+                                    <property name="shadow_type">in</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
-                                    <property name="shadow_type">in</property>
-                                    <child>
-                                      <object class="GtkTextView" id="MembersText">
-                                        <property name="visible">True</property>
-                                        <property name="can_focus">True</property>
-                                      </object>
-                                    </child>
                                   </object>
                                 </child>
                               </object>
@@ -2585,7 +2495,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area21">
+          <object class="GtkButtonBox" id="dialog-action_area21">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -2637,10 +2547,11 @@
     <property name="modal">True</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox10">
+      <object class="GtkBox" id="dialog-vbox10">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area10">
+          <object class="GtkButtonBox" id="dialog-action_area10">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -2682,7 +2593,8 @@
           </packing>
         </child>
         <child>
-          <object class="GtkVBox" id="box6">
+          <object class="GtkBox" id="box6">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
@@ -2698,7 +2610,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHBox" id="box7">
+              <object class="GtkBox" id="box7">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -2749,7 +2661,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHBox" id="box8">
+              <object class="GtkBox" id="box8">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -2800,7 +2712,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHBox" id="box9">
+              <object class="GtkBox" id="box9">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -2856,11 +2768,12 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox20">
+      <object class="GtkBox" id="dialog-vbox20">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area20">
+          <object class="GtkButtonBox" id="dialog-action_area20">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -2900,7 +2813,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkHBox" id="hbox21">
+          <object class="GtkBox" id="hbox21">
             <property name="can_focus">False</property>
             <property name="spacing">10</property>
             <child>
@@ -2916,17 +2829,12 @@
                     <property name="left_padding">10</property>
                     <property name="right_padding">10</property>
                     <child>
-                      <object class="GtkScrolledWindow" id="scrolledwindowDialogViewOutput24">
+                      <object class="GtkTreeView" id="treeViewPredicate">
+                        <property name="width_request">150</property>
+                        <property name="height_request">150</property>
+                        <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <child>
-                          <object class="GtkTreeView" id="treeViewPredicate">
-                            <property name="width_request">150</property>
-                            <property name="height_request">150</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="rules_hint">True</property>
-                          </object>
-                        </child>
+                        <property name="rules_hint">True</property>
                       </object>
                     </child>
                   </object>
@@ -2958,10 +2866,11 @@
                     <property name="left_padding">10</property>
                     <property name="right_padding">19</property>
                     <child>
-                      <object class="GtkVBox" id="vbox1b29">
+                      <object class="GtkBox" id="vbox1b29">
+                        <property name="orientation">vertical</property>
                         <property name="can_focus">False</property>
                         <child>
-                          <object class="GtkHBox" id="comboboxTypeDialogViewPredicate">
+                          <object class="GtkBox" id="comboboxTypeDialogViewPredicate">
                             <property name="can_focus">False</property>
                             <property name="spacing">10</property>
                             <child>
@@ -3010,11 +2919,13 @@
                                 <property name="left_padding">10</property>
                                 <property name="right_padding">10</property>
                                 <child>
-                                  <object class="GtkVBox" id="vbox35">
+                                  <object class="GtkBox" id="vbox35">
+                                    <property name="orientation">vertical</property>
                                     <property name="can_focus">False</property>
                                     <property name="spacing">5</property>
                                     <child>
-                                      <object class="GtkVBox" id="vboxP1">
+                                      <object class="GtkBox" id="vboxP1">
+                                        <property name="orientation">vertical</property>
                                         <property name="visible">True</property>
                                         <property name="can_focus">False</property>
                                         <child>
@@ -3032,15 +2943,10 @@
                                           </packing>
                                         </child>
                                         <child>
-                                          <object class="GtkScrolledWindow" id="scrolledwindow36">
+                                          <object class="GtkTextView" id="PredicateFunction">
+                                            <property name="width_request">300</property>
+                                            <property name="height_request">300</property>
                                             <property name="can_focus">True</property>
-                                            <child>
-                                              <object class="GtkTextView" id="PredicateFunction">
-                                                <property name="width_request">300</property>
-                                                <property name="height_request">300</property>
-                                                <property name="can_focus">True</property>
-                                              </object>
-                                            </child>
                                           </object>
                                           <packing>
                                             <property name="expand">True</property>
@@ -3128,12 +3034,13 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox13">
+      <object class="GtkBox" id="dialog-vbox13">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area13">
+          <object class="GtkButtonBox" id="dialog-action_area13">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
@@ -3176,11 +3083,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkVBox" id="vbox3">
+          <object class="GtkBox" id="vbox3">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkHBox" id="hbox26">
+              <object class="GtkBox" id="hbox26">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -3203,18 +3111,12 @@
                             <property name="can_focus">False</property>
                             <property name="resize_mode">queue</property>
                             <child>
-                              <object class="GtkScrolledWindow" id="scrolledwindowObs">
+                              <object class="GtkTreeView" id="TreeViewRules">
+                                <property name="shadow_type">etched-out</property>
+                                <property name="width_request">220</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="shadow_type">etched-out</property>
-                                <child>
-                                  <object class="GtkTreeView" id="TreeViewRules">
-                                    <property name="width_request">220</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="rules_hint">True</property>
-                                  </object>
-                                </child>
+                                <property name="rules_hint">True</property>
                               </object>
                             </child>
                           </object>
@@ -3237,7 +3139,8 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkVButtonBox" id="vbuttonbox1">
+                  <object class="GtkButtonBox" id="vbuttonbox1">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="homogeneous">True</property>
@@ -3297,18 +3200,12 @@
                             <property name="can_focus">False</property>
                             <property name="resize_mode">queue</property>
                             <child>
-                              <object class="GtkScrolledWindow" id="scrolledwindowViews">
+                              <object class="GtkTreeView" id="TreeViewPredicates">
+                                <property name="shadow_type">etched-out</property>
+                                <property name="width_request">220</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
-                                <property name="shadow_type">etched-out</property>
-                                <child>
-                                  <object class="GtkTreeView" id="TreeViewPredicates">
-                                    <property name="width_request">220</property>
-                                    <property name="visible">True</property>
-                                    <property name="can_focus">True</property>
-                                    <property name="rules_hint">True</property>
-                                  </object>
-                                </child>
+                                <property name="rules_hint">True</property>
                               </object>
                             </child>
                           </object>
@@ -3359,14 +3256,15 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox7">
+      <object class="GtkBox" id="dialog-vbox7">
+        <property name="orientation">vertical</property>
         <property name="width_request">500</property>
         <property name="height_request">500</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area7">
+          <object class="GtkButtonBox" id="dialog-action_area7">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>

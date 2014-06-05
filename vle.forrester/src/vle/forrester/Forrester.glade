@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="2.16"/>
+  <requires lib="gtk+" version="3.0"/>
   <!-- interface-naming-policy toplevel-contextual -->
   <object class="GtkDialog" id="CompartmentDialog">
     <property name="can_focus">False</property>
@@ -12,7 +12,8 @@
     <property name="type_hint">dialog</property>
     <property name="transient_for">ForresterDialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox10">
+      <object class="GtkBox" id="dialog-vbox10">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
@@ -28,12 +29,13 @@
                 <property name="can_focus">False</property>
                 <property name="left_padding">12</property>
                 <child>
-                  <object class="GtkVBox" id="vbox1c1">
+                  <object class="GtkBox" id="vbox1c1">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">4</property>
                     <child>
-                      <object class="GtkHBox" id="hbox1c2">
+                      <object class="GtkBox" id="hbox1c2">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
@@ -88,7 +90,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkHBox" id="box3">
+                      <object class="GtkBox" id="box3">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
@@ -150,7 +152,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area10">
+          <object class="GtkButtonBox" id="dialog-action_area10">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
@@ -209,10 +211,11 @@
     <property name="destroy_with_parent">True</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox11">
+      <object class="GtkBox" id="dialog-vbox11">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area11">
+          <object class="GtkButtonBox" id="dialog-action_area11">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -254,12 +257,13 @@
           </packing>
         </child>
         <child>
-          <object class="GtkHBox" id="box5">
+          <object class="GtkBox" id="box5">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="spacing">13</property>
             <child>
-              <object class="GtkVBox" id="box20">
+              <object class="GtkBox" id="box20">
+                <property name="orientation">vertical</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -274,20 +278,12 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkScrolledWindow" id="scrolledwindow1">
+                          <object class="GtkTreeView" id="compartmentTreeView">
                             <property name="width_request">197</property>
                             <property name="height_request">170</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="shadow_type">in</property>
-                            <child>
-                              <object class="GtkTreeView" id="compartmentTreeView">
-                                <property name="width_request">193</property>
-                                <property name="height_request">170</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                              </object>
-                            </child>
                           </object>
                         </child>
                       </object>
@@ -319,20 +315,12 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkScrolledWindow" id="scrolledwindow2">
+                          <object class="GtkTreeView" id="varParaTreeView">
                             <property name="width_request">197</property>
                             <property name="height_request">170</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
                             <property name="shadow_type">in</property>
-                            <child>
-                              <object class="GtkTreeView" id="varParaTreeView">
-                                <property name="width_request">196</property>
-                                <property name="height_request">170</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                              </object>
-                            </child>
                           </object>
                         </child>
                       </object>
@@ -361,13 +349,14 @@
               </packing>
             </child>
             <child>
-              <object class="GtkVBox" id="box6">
+              <object class="GtkBox" id="box6">
+                <property name="orientation">vertical</property>
                 <property name="width_request">311</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="spacing">5</property>
                 <child>
-                  <object class="GtkHBox" id="box7">
+                  <object class="GtkBox" id="box7">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -408,7 +397,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkHBox" id="box15">
+                  <object class="GtkBox" id="box15">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -456,7 +445,8 @@
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <child>
-                      <object class="GtkVBox" id="box16">
+                      <object class="GtkBox" id="box16">
+                        <property name="orientation">vertical</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
@@ -476,7 +466,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkHBox" id="box17">
+                          <object class="GtkBox" id="box17">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <child>
@@ -519,7 +509,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkHBox" id="box18">
+                          <object class="GtkBox" id="box18">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <child>
@@ -562,7 +552,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkHBox" id="box19">
+                          <object class="GtkBox" id="box19">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <child>
@@ -629,7 +619,8 @@
               </packing>
             </child>
             <child>
-              <object class="GtkVBox" id="box21">
+              <object class="GtkBox" id="box21">
+                <property name="orientation">vertical</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -681,7 +672,7 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkTable" id="table1">
+                          <object class="GtkGrid" id="table1">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
                             <property name="n_rows">4</property>
@@ -886,7 +877,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkHBox" id="hbox156464">
+          <object class="GtkBox" id="hbox156464">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
@@ -937,12 +928,13 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox9">
+      <object class="GtkBox" id="dialog-vbox9">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area9">
+          <object class="GtkButtonBox" id="dialog-action_area9">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
@@ -985,31 +977,26 @@
           </packing>
         </child>
         <child>
-          <object class="GtkVBox" id="vbox1">
+          <object class="GtkBox" id="vbox1">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkHBox" id="ForresterHBox">
+              <object class="GtkBox" id="ForresterHBox">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
-                  <object class="GtkScrolledWindow" id="ForresterScrolledWindow">
+                  <object class="GtkViewport" id="ForresterViewport">
                     <property name="width_request">500</property>
                     <property name="height_request">500</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
+                    <property name="resize_mode">queue</property>
                     <property name="shadow_type">in</property>
                     <child>
-                      <object class="GtkViewport" id="ForresterViewport">
+                      <object class="GtkDrawingArea" id="ForresterDrawingArea">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="resize_mode">queue</property>
-                        <child>
-                          <object class="GtkDrawingArea" id="ForresterDrawingArea">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>
@@ -1040,7 +1027,7 @@
                     <property name="can_focus">False</property>
                     <property name="left_padding">12</property>
                     <child>
-                      <object class="GtkHBox" id="hbox1">
+                      <object class="GtkBox" id="hbox1">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="homogeneous">True</property>
@@ -1117,7 +1104,8 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <child>
-                  <object class="GtkVBox" id="box1">
+                  <object class="GtkBox" id="box1">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -1132,7 +1120,7 @@
                             <property name="can_focus">False</property>
                             <property name="left_padding">12</property>
                             <child>
-                              <object class="GtkHButtonBox" id="integrationSchemeBB">
+                              <object class="GtkButtonBox" id="integrationSchemeBB">
                                 <property name="visible">True</property>
                                 <property name="can_focus">False</property>
                                 <property name="layout_style">spread</property>
@@ -1248,10 +1236,11 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox12">
+      <object class="GtkBox" id="dialog-vbox12">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area12">
+          <object class="GtkButtonBox" id="dialog-action_area12">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -1293,11 +1282,12 @@
           </packing>
         </child>
         <child>
-          <object class="GtkVBox" id="box8">
+          <object class="GtkBox" id="box8">
+            <property name="orientation">vertical</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
-              <object class="GtkHBox" id="box9">
+              <object class="GtkBox" id="box9">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -1350,7 +1340,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkHBox" id="box10">
+              <object class="GtkBox" id="box10">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
@@ -1414,7 +1404,8 @@
     <property name="type_hint">dialog</property>
     <property name="transient_for">ForresterDialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox4">
+      <object class="GtkBox" id="dialog-vbox4">
+        <property name="orientation">vertical</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
@@ -1430,12 +1421,13 @@
                 <property name="can_focus">False</property>
                 <property name="left_padding">12</property>
                 <child>
-                  <object class="GtkVBox" id="vbox1c">
+                  <object class="GtkBox" id="vbox1c">
+                    <property name="orientation">vertical</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="spacing">4</property>
                     <child>
-                      <object class="GtkHBox" id="hbox1c">
+                      <object class="GtkBox" id="hbox1c">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
@@ -1490,7 +1482,7 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkHBox" id="box4">
+                      <object class="GtkBox" id="box4">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
@@ -1560,7 +1552,7 @@
                 <property name="can_focus">False</property>
                 <property name="left_padding">12</property>
                 <child>
-                  <object class="GtkHBox" id="hbox1c1">
+                  <object class="GtkBox" id="hbox1c1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
@@ -1613,7 +1605,7 @@
           </packing>
         </child>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area4">
+          <object class="GtkButtonBox" id="dialog-action_area4">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
@@ -1670,14 +1662,15 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox7">
+      <object class="GtkBox" id="dialog-vbox7">
+        <property name="orientation">vertical</property>
         <property name="width_request">500</property>
         <property name="height_request">500</property>
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area7">
+          <object class="GtkButtonBox" id="dialog-action_area7">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
@@ -1764,11 +1757,12 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox13">
+      <object class="GtkBox" id="dialog-vbox13">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <property name="spacing">2</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area13">
+          <object class="GtkButtonBox" id="dialog-action_area13">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -1810,7 +1804,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkHBox" id="box11">
+          <object class="GtkBox" id="box11">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
@@ -1879,10 +1873,11 @@
     <property name="window_position">center-on-parent</property>
     <property name="type_hint">dialog</property>
     <child internal-child="vbox">
-      <object class="GtkVBox" id="dialog-vbox8">
+      <object class="GtkBox" id="dialog-vbox8">
+        <property name="orientation">vertical</property>
         <property name="can_focus">False</property>
         <child internal-child="action_area">
-          <object class="GtkHButtonBox" id="dialog-action_area8">
+          <object class="GtkButtonBox" id="dialog-action_area8">
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
@@ -1924,7 +1919,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkHBox" id="box2">
+          <object class="GtkBox" id="box2">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
