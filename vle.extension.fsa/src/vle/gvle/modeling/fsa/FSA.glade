@@ -115,8 +115,8 @@
                     <property name="height_request">500</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="hscrollbar_policy">automatic</property>
-                    <property name="vscrollbar_policy">automatic</property>
+                    <property name="hscroll_policy">natural</property>
+                    <property name="vscroll_policy">natural</property>
                     <property name="resize_mode">queue</property>
                     <child>
                       <object class="GtkDrawingArea" id="StatechartDrawingArea">

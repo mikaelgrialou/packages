@@ -1508,8 +1508,8 @@
                     <property name="left_padding">12</property>
                     <child>
                       <object class="GtkTreeView" id="treeVPred">
-                        <property name="hscrollbar_policy">automatic</property>
-                        <property name="vscrollbar_policy">automatic</property>
+                        <property name="hscroll_policy">natural</property>
+                        <property name="vscroll_policy">natural</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                       </object>
