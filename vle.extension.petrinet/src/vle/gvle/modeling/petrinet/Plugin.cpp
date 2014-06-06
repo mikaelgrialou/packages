@@ -145,7 +145,7 @@ const Glib::ustring PluginPetriNet::UI_DEFINITION =
     mXml->get_widget_derived("PetriNetDrawingArea", mView);
 
     {
-        Gtk::HBox* hbox;
+        Gtk::Box* hbox;
 
         mXml->get_widget("PetriNetHBox", hbox);
         mActionGroup = Gtk::ActionGroup::create();

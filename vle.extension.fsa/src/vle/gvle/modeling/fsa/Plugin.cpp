@@ -205,7 +205,7 @@ PluginFSA::PluginFSA(const std::string& package, const std::string& library,
                 &PluginFSA::onTimeStep)));
 
     {
-        Gtk::HBox* hbox;
+        Gtk::Box* hbox;
         mXml->get_widget("StatechartHBox", hbox);
         mActionGroup = Gtk::ActionGroup::create();
         mUIManager = Gtk::UIManager::create();

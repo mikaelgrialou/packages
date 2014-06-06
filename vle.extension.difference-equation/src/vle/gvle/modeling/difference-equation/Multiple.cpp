@@ -43,7 +43,7 @@ Multiple::~Multiple()
 
 void Multiple::build(bool modeling)
 {
-    Gtk::VBox* vbox;
+    Gtk::Box* vbox;
 
 
     vle::utils::Package pack(getPackage());
@@ -116,7 +116,7 @@ bool Multiple::create(vpz::AtomicModel& model,
 void Multiple::destroy()
 {
     if (m_buttonSource) {
-        Gtk::VBox* vbox;
+        Gtk::Box* vbox;
 
         mXml->get_widget("MultiplePluginVBox", vbox);
         vbox->remove(*m_buttonSource);

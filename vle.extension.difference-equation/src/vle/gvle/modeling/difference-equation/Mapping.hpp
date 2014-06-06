@@ -106,7 +106,7 @@ public:
 private:
     Gtk::Expander*     m_expander;
     MappingTreeView*   m_mappingTreeView;
-    Gtk::HBox*         m_hboxMode;
+    Gtk::Box*         m_hboxMode;
     Gtk::RadioButton*  m_RadioButtonName;
     Gtk::RadioButton*  m_RadioButtonPort;
     Gtk::RadioButton*  m_RadioButtonMapping;

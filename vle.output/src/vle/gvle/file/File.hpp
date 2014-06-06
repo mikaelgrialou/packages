@@ -58,8 +58,8 @@ private:
     Gtk::CheckButton* mCheckFlushByBag;
     Gtk::ComboBoxText* mComboType;
     Gtk::ComboBoxText* mComboFile;
-    Gtk::HBox* mHBoxFile;
-    Gtk::HBox* mHBoxLocale;
+    Gtk::Box* mHBoxFile;
+    Gtk::Box* mHBoxLocale;
 
     void init(vpz::Output& output);
     void assign(vpz::Output& output);

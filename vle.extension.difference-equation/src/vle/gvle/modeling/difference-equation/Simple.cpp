@@ -46,7 +46,7 @@ Simple::~Simple()
 
 void Simple::build(bool modeling)
 {
-    Gtk::VBox* vbox;
+    Gtk::Box* vbox;
 
     vle::utils::Package pack(getPackage());
 
@@ -120,7 +120,7 @@ bool Simple::create(vpz::AtomicModel& model,
 void Simple::destroy()
 {
     if (m_buttonSource) {
-        Gtk::VBox* vbox;
+        Gtk::Box* vbox;
 
         mXml->get_widget("SimplePluginVBox", vbox);
         vbox->remove(*m_buttonSource);

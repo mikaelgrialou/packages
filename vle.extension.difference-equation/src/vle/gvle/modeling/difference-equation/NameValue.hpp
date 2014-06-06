@@ -100,7 +100,7 @@ private:
 
     void onClickCheckButton();
 
-    Gtk::HBox*         m_hbox;
+    Gtk::Box*         m_hbox;
     Gtk::Entry*        m_entryName;
     Gtk::Entry*        m_entryValue;
     InitTreeView*      m_initTreeView;

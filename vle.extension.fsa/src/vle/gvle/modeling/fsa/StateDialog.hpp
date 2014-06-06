@@ -133,7 +133,7 @@ private:
     const eventInStates_t& mEventInStates;
     Gtk::Dialog* mDialog;
     Gtk::Entry* mEventEntry;
-    Gtk::VBox* mEventInStateVBox;
+    Gtk::Box* mEventInStateVBox;
     Gtk::ComboBoxText* mActionEntry;
     Gtk::Button* mActionButton;
     std::list < sigc::connection > mList;
@@ -351,7 +351,7 @@ private:
     Gtk::Dialog* mDialog;
     Gtk::Entry* mNameEntry;
     Gtk::CheckButton* mInitialCheckbox;
-    Gtk::VBox* mStateVBox;
+    Gtk::Box* mStateVBox;
     Gtk::ComboBoxText* mInActionEntry;
     Gtk::Button* mInActionButton;
     Gtk::ComboBoxText* mOutActionEntry;

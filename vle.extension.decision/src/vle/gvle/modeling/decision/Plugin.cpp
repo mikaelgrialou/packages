@@ -271,7 +271,7 @@ PluginDecision::PluginDecision(const std::string& package,
     mList.push_back(mSaveAsMenu->signal_activate().connect(
             sigc::mem_fun(*this, &PluginDecision::onUserSaveAsMenu)));
     {
-        Gtk::HBox* hbox;
+        Gtk::Box* hbox;
         mXml->get_widget("StatechartHBox", hbox);
         mActionGroup = Gtk::ActionGroup::create();
         mUIManager = Gtk::UIManager::create();

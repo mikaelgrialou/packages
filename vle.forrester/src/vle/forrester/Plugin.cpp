@@ -219,7 +219,7 @@ PluginForrester::PluginForrester(const std::string& package,
                         sigc::mem_fun(*this,
                                       &PluginForrester::onRk4)));
     {
-        Gtk::HBox* hbox;
+        Gtk::Box* hbox;
         mXml->get_widget("ForresterHBox", hbox);
         mActionGroup = Gtk::ActionGroup::create();
         mUIManager = Gtk::UIManager::create();

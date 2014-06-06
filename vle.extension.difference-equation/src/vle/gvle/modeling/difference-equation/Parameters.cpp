@@ -488,7 +488,8 @@ Gtk::Widget& Parameters::build(Glib::RefPtr < Gtk::Builder >& ref)
     Gtk::Frame* parametersFrame;
     Gtk::Frame* externalVariablesFrame;
 
-    m_hbox = Gtk::manage(new Gtk::HBox);
+    m_hbox = Gtk::manage(new Gtk::Box (Gtk::ORIENTATION_HORIZONTAL));
+    
     ref->get_widget_derived("ParametersTreeView",
 			    m_parametersTreeView);
     ref->get_widget("ParametersFrame", parametersFrame);

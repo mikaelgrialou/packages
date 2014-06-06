@@ -113,11 +113,11 @@ private:
     Gtk::Entry* mPriorityEntry;
     Gtk::Image* mStatusName;
     // input
-    Gtk::HBox* mInputHBox;
+    Gtk::Box* mInputHBox;
     Gtk::CheckButton* mInputCheckbox;
     Gtk::ComboBoxText* mInputEntry;
     // output
-    Gtk::HBox* mOutputHBox;
+    Gtk::Box* mOutputHBox;
     Gtk::CheckButton* mOutputCheckbox;
     Gtk::ComboBoxText* mOutputEntry;
     // delay

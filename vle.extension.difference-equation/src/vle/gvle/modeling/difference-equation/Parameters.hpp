@@ -200,7 +200,7 @@ private:
 	Gtk::Entry*   m_name;
     };
 
-    Gtk::HBox*                  m_hbox;
+    Gtk::Box*                  m_hbox;
     ParametersTreeView*         m_parametersTreeView;
     ExternalVariablesTreeView*  m_externalVariablesTreeView;
     std::vector < std::string > m_oldParameters;

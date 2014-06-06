@@ -75,7 +75,7 @@ TransitionDialog::TransitionDialog(
     mComboVBox->pack_start(*mActionEntry, true, true);
 
     // send
-    mSendHBox = Gtk::manage(new Gtk::HBox);
+    mSendHBox = Gtk::manage(new Gtk::Box (Gtk::ORIENTATION_HORIZONTAL));
     mOutputPortEntry = Gtk::manage(new Gtk::ComboBoxText);
     mSendHBox->pack_start(*mOutputPortEntry, true, true);
     mSendEntry = Gtk::manage(new Gtk::ComboBoxText);

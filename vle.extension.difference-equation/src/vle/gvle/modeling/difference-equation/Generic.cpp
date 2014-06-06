@@ -44,7 +44,7 @@ Generic::~Generic()
 
 void Generic::build(bool modeling)
 {
-    Gtk::VBox* vbox;
+    Gtk::Box* vbox;
 
     vle::utils::Package pack(getPackage());
 
@@ -63,7 +63,7 @@ void Generic::build(bool modeling)
     vbox->pack_start(mMapping.build(mXml));
 
     if (modeling) {
-        Gtk::VBox* vbox;
+        Gtk::Box* vbox;
         mXml->get_widget("GenericPluginVBox", vbox);
         vbox->pack_start(mParameters.buildParameters(mXml));
 
@@ -119,7 +119,7 @@ bool Generic::create(vpz::AtomicModel& model,
 void Generic::destroy()
 {
     if (m_buttonSource) {
-        Gtk::VBox* vbox;
+        Gtk::Box* vbox;
 
         mXml->get_widget("GenericPluginVBox", vbox);
         vbox->remove(*m_buttonSource);

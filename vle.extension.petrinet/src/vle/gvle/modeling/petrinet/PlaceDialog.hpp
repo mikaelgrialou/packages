@@ -97,7 +97,7 @@ private:
     Gtk::Entry* mNameEntry;
     Gtk::Image* mStatusName;
     // output
-    Gtk::HBox* mOutputHBox;
+    Gtk::Box* mOutputHBox;
     Gtk::CheckButton* mOutputCheckbox;
     Gtk::ComboBoxText* mOutputEntry;
     // marking

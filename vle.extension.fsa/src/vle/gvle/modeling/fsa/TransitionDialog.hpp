@@ -134,7 +134,7 @@ private:
     Statechart* mStatechart;
 
     Gtk::Dialog* mDialog;
-    Gtk::VBox* mComboVBox;
+    Gtk::Box* mComboVBox;
     // event
     Gtk::ComboBoxText* mEventEntry;
     // after
@@ -150,7 +150,7 @@ private:
     Gtk::ComboBoxText* mActionEntry;
     Gtk::Button* mActionButton;
     // send
-    Gtk::HBox* mSendHBox;
+    Gtk::Box* mSendHBox;
     Gtk::ComboBoxText* mOutputPortEntry;
     Gtk::ComboBoxText* mSendEntry;
     Gtk::Button* mSendButton;
