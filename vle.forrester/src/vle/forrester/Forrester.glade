@@ -79,13 +79,24 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkTreeView" id="compartmentTreeView">
+                          <object class="GtkScrolledWindow" id="scrolledwindow1">
                             <property name="width_request">197</property>
                             <property name="height_request">170</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <child internal-child="selection">
-                              <object class="GtkTreeSelection" id="treeview-selection1"/>
+                            <property name="shadow_type">in</property>
+                            <child>
+                              <object class="GtkTreeView" id="compartmentTreeView">
+                                <property name="width_request">193</property>
+                                <property name="height_request">170</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="hexpand">True</property>
+                                <property name="vexpand">True</property>
+                                <child internal-child="selection">
+                                  <object class="GtkTreeSelection" id="treeview-selection1"/>
+                                </child>
+                              </object>
                             </child>
                           </object>
                         </child>
@@ -118,13 +129,24 @@
                         <property name="can_focus">False</property>
                         <property name="left_padding">12</property>
                         <child>
-                          <object class="GtkTreeView" id="varParaTreeView">
+                          <object class="GtkScrolledWindow" id="scrolledwindow2">
                             <property name="width_request">197</property>
                             <property name="height_request">170</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <child internal-child="selection">
-                              <object class="GtkTreeSelection" id="treeview-selection2"/>
+                            <property name="shadow_type">in</property>
+                            <child>
+                              <object class="GtkTreeView" id="varParaTreeView">
+                                <property name="width_request">196</property>
+                                <property name="height_request">170</property>
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="hexpand">True</property>
+                                <property name="vexpand">True</property>
+                                <child internal-child="selection">
+                                  <object class="GtkTreeSelection" id="treeview-selection2"/>
+                                </child>
+                              </object>
                             </child>
                           </object>
                         </child>
@@ -465,8 +487,8 @@
                           <object class="GtkGrid" id="table1">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
+                            <property name="vexpand">True</property>
                             <property name="row_homogeneous">True</property>
-                            <property name="column_homogeneous">True</property>
                             <child>
                               <object class="GtkButton" id="AdditionButton">
                                 <property name="label" translatable="yes">+</property>
@@ -661,7 +683,7 @@
                     </child>
                   </object>
                   <packing>
-                    <property name="expand">True</property>
+                    <property name="expand">False</property>
                     <property name="fill">True</property>
                     <property name="position">1</property>
                   </packing>
@@ -790,16 +812,25 @@
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <child>
-                  <object class="GtkViewport" id="ForresterViewport">
+                  <object class="GtkScrolledWindow" id="ForresterScrolledWindow">
                     <property name="width_request">500</property>
                     <property name="height_request">500</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="resize_mode">queue</property>
+                    <property name="shadow_type">in</property>
                     <child>
-                      <object class="GtkDrawingArea" id="ForresterDrawingArea">
+                      <object class="GtkViewport" id="ForresterViewport">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
+                        <property name="resize_mode">queue</property>
+                        <child>
+                          <object class="GtkDrawingArea" id="ForresterDrawingArea">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                          </object>
+                        </child>
                       </object>
                     </child>
                   </object>
